@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoria-02 / page 03</title>
+
+    <style> 
+        body{
+            background-color: #3333;
+            color: #ffff;
+            
+          
+        }
+        #quadrado{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: nomedaanimacao 4s linear infinite;
+        }
+
+        
+        
+        @keyframes nomedaanimacao{
+          0% {
+            background-color: red;
+            top: 0;
+            left: 0;
+          }
+          25% {
+            background-color: yellow;
+            top: 0;
+            left: 200px;
+          }
+          50% {
+            background-color: green;
+            top: 200px;
+            left: 200px;
+          }
+          75% {
+            background-color: blue;
+            top: 200px;
+            left: 0;
+          }
+          100% {
+            background-color: red;
+            top: 0;
+            left: 0;
+          }
+
+          
+        
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Page 03</h2>
+    <h4>Pontuação: <span id="pontos">0</span></h4>
+
+    <div id="quadrado"></div>
+    <script>
+        const quadradoElemento = document.querySelector('#quadrado')
+        const pontos = document.querySelector('#pontos')
+        var cont = 0;
+
+        quadradoElemento.addEventListener('click', () => {
+        cont = cont + 1;
+
+        pontos.textContent = cont;
+        })
+    </script>
+</body>
+</html>
